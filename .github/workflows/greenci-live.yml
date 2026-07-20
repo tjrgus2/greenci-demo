@@ -1,0 +1,51 @@
+name: GreenCI Live Validation
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simulate build
+        run: sleep 10
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simulate tests
+        run: sleep 20
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simulate lint
+        run: sleep 5
+
+  greenci:
+    name: GreenCI
+    if: always()
+    needs:
+      - build
+      - test
+      - lint
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Analyze CI
+        uses: tjrgus2/GreenCI@5f559f76819d8b1a2fb538cf4b000388197f0d6b
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
