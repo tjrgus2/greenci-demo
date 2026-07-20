@@ -46,6 +46,6 @@ jobs:
 
     steps:
       - name: Analyze CI
-        uses: tjrgus2/GreenCI@5f559f76819d8b1a2fb538cf4b000388197f0d6b
+        uses: tjrgus2/GreenCI@75d37da9dec25152b17ff1083ab764bfd60e7be4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
