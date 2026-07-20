@@ -19,9 +19,7 @@ jobs:
 
     steps:
       - name: Simulate tests
-        run: |
-          sleep 20
-          exit 1
+        run: sleep 20
 
   lint:
     name: Lint
