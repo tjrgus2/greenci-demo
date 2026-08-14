@@ -97,11 +97,7 @@ jobs:
 
     steps:
       - name: Analyze CI
-<<<<<<< HEAD
         uses: tjrgus2/GreenCI@d15bc009041ac36bf77ef1699938cdeb5938edb2
-=======
-        uses: tjrgus2/GreenCI@d15bc009041ac36bf77ef1699938cdeb5938edb2
->>>>>>> origin/main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           parse-failure-logs: 'true'
