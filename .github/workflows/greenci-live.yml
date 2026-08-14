@@ -3,6 +3,8 @@ name: GreenCI Live Validation
 on:
   workflow_dispatch:
   pull_request:
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -46,6 +48,6 @@ jobs:
 
     steps:
       - name: Analyze CI
-        uses: tjrgus2/GreenCI@75d37da9dec25152b17ff1083ab764bfd60e7be4
+        uses: tjrgus2/GreenCI@11e934f4b1c75190bc57d37bba567ce2e285e0c2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

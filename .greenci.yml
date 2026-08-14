@@ -1,0 +1,20 @@
+version: 1
+
+locale: en
+
+baseline:
+  successful-runs: 7
+  minimum-samples: 3
+  workflow-shape-threshold: 0.8
+  statistics:
+    regression-percent: 15
+    modified-z-score: 3.5
+
+carbon:
+  region: KR
+  simulation-samples: 2000
+
+report:
+  pr-comment: true
+  update-existing-comment: true
+  top-hotspots: 5
