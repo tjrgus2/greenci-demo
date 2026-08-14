@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Simulate tests
-        run: sleep 20
+        run: sleep 60
 
   lint:
     name: Lint
@@ -48,6 +48,6 @@ jobs:
 
     steps:
       - name: Analyze CI
-        uses: tjrgus2/GreenCI@11e934f4b1c75190bc57d37bba567ce2e285e0c2
+        uses: tjrgus2/GreenCI@f0e6053e9c7cd924c70d8237ec0d0a9e80f907a4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
