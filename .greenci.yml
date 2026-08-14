@@ -23,6 +23,10 @@ analysis:
   critical-path:
     enabled: true
     parse-workflow-dag: true
+  failure-logs:
+    enabled: true
+    max-jobs: 2
+    tail-lines: 500
   test-reports:
     - artifact: test-results
       format: junit

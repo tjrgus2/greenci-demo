@@ -63,7 +63,11 @@ jobs:
       - name: npm ci
         run: sleep 25
       - name: Run integration tests
-        run: sleep 45
+        run: |
+          sleep 40
+          echo "src/checkout.ts(84,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'CartId'."
+          echo "src/checkout.ts(91,3): error TS2322: Type 'null' is not assignable to type 'Order'."
+          exit 1
 
   security:
     name: Security
@@ -96,3 +100,4 @@ jobs:
         uses: tjrgus2/GreenCI@d15bc009041ac36bf77ef1699938cdeb5938edb2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          parse-failure-logs: 'true'
