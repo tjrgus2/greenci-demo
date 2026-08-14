@@ -97,7 +97,7 @@ jobs:
 
     steps:
       - name: Analyze CI
-        uses: tjrgus2/GreenCI@7dab0b07419b4244688ce15a5772c02b06a1c7be
+        uses: tjrgus2/GreenCI@f073d91778055e55e75332c08e764b139cb70e4d
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           parse-failure-logs: 'true'
