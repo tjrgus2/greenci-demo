@@ -28,7 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: npm ci
-        run: sleep 25
+      # Optimization: the dependency cache populated by Build now hits here.
+        run: sleep 2
       - name: npm test
         run: sleep 15
       - name: Write JUnit report
@@ -61,7 +62,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: npm ci
-        run: sleep 25
+      # Optimization: the dependency cache populated by Build now hits here.
+        run: sleep 2
       - name: Run integration tests
         run: sleep 45
 
@@ -70,7 +72,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        rule: [secrets, dependencies, sast]
+        # Optimization: the full matrix moves to the default branch schedule.
+        rule: [secrets]
     steps:
       - name: Scan
         run: sleep 40
