@@ -18,3 +18,29 @@ report:
   pr-comment: true
   update-existing-comment: true
   top-hotspots: 5
+
+analysis:
+  critical-path:
+    enabled: true
+    parse-workflow-dag: true
+  test-reports:
+    - artifact: test-results
+      format: junit
+
+recommendations:
+  enabled: true
+  minimum-confidence: 0.65
+  max-count: 6
+
+policy:
+  default-mode: warn
+  rules:
+    - metric: runner-time-regression-percent
+      operator: greater-than
+      value: 20
+      mode: warn
+      minimum-confidence: medium
+    - metric: failed-jobs
+      operator: greater-than
+      value: 0
+      mode: warn
