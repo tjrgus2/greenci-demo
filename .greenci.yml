@@ -1,6 +1,6 @@
 version: 1
 
-locale: en
+locale: ko
 
 baseline:
   successful-runs: 7
@@ -11,7 +11,7 @@ baseline:
     modified-z-score: 3.5
 
 carbon:
-  region: KR
+  region: ZZ
   simulation-samples: 2000
 
 report:
