@@ -1,6 +1,7 @@
 version: 1
 
 locale: ko
+report-comment: true
 
 baseline:
   successful-runs: 7
