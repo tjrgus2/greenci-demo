@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Simulate tests
-        run: sleep 20
+        run: sleep 60
 
   lint:
     name: Lint
