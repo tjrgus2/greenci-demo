@@ -1,6 +1,6 @@
 version: 1
 
-locale: en
+locale: ko
 
 baseline:
   successful-runs: 7
