@@ -63,7 +63,7 @@ jobs:
       - name: npm ci
         run: sleep 25
       - name: Run integration tests
-        run: sleep 45
+        run: sleep 120
 
   security:
     name: Security
